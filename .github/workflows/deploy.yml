@@ -27,4 +27,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ./ # FTP account lands directly inside public_html
-          dangerous-clean-slate: true # one-time: wipe stale nested public_html/ then revert to false
+          dangerous-clean-slate: false # incremental deploys; flip to true only for a one-off full wipe
